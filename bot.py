@@ -24,7 +24,8 @@ async def comment_under_post(message: Message):
         chat_id=message.chat.id,
         photo=photo,
         caption=COMMENT_TEXT,
-        parse_mode="HTML"
+        parse_mode="HTML",
+        reply_to_message_id=message.message_id
     )
 
 async def main():
