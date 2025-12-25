@@ -1,6 +1,6 @@
 import asyncio
 from aiogram import Bot, Dispatcher, F
-from aiogram.types import Message
+from aiogram.types import Message, InputFile
 
 BOT_TOKEN = "7527692969:AAEeynFXlcLQsbw32fb8srS34YNBGJMc27s"
 
@@ -19,7 +19,13 @@ dp = Dispatcher()
     F.forward_from_chat.type == "channel"
 )
 async def comment_under_post(message: Message):
-    await message.reply(COMMENT_TEXT, parse_mode="HTML")
+    photo = InputFile(PHOTO_PATH)
+    await bot.send_photo(
+        chat_id=message.chat.id,
+        photo=photo,
+        caption=COMMENT_TEXT,
+        parse_mode="HTML"
+    )
 
 async def main():
     await bot.delete_webhook(drop_pending_updates=True)
