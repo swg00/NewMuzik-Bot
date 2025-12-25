@@ -4,8 +4,8 @@ from aiogram.types import Message
 
 BOT_TOKEN = "7527692969:AAEeynFXlcLQsbw32fb8srS34YNBGJMc27s"
 COMMENT_TEXT = (
-    "<b>СДЕЛАТЬ ПОСТ О СЕБЕ или ВЫЛОЖИТЬ РЕЛИЗ:</b><br>"
-    "<b>Голоса:</b><br><br>"
+    "<b>СДЕЛАТЬ ПОСТ О СЕБЕ или ВЫЛОЖИТЬ РЕЛИЗ:</b>\n"
+    "<b>Голоса:</b>\n\n"
     "Пиши комментарий и становись легендой музыки!"
 )
 
