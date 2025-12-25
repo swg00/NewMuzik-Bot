@@ -19,13 +19,15 @@ dp = Dispatcher()
     F.forward_from_chat.type == "channel"
 )
 async def comment_under_post(message: Message):
-    photo = InputFile(PHOTO_PATH)
+    # Правильная инициализация InputFile для aiogram v3
+    photo = InputFile(path=PHOTO_PATH)
+
     await bot.send_photo(
         chat_id=message.chat.id,
         photo=photo,
         caption=COMMENT_TEXT,
         parse_mode="HTML",
-        reply_to_message_id=message.message_id
+        reply_to_message_id=message.message_id  # чтобы фото было комментарием под постом
     )
 
 async def main():
