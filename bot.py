@@ -1,6 +1,6 @@
 import asyncio
 from aiogram import Bot, Dispatcher, F
-from aiogram.types import Message, InputFile
+from aiogram.types import Message, FSInputFile  # <-- используем FSInputFile
 
 BOT_TOKEN = "7527692969:AAEeynFXlcLQsbw32fb8srS34YNBGJMc27s"
 
@@ -20,8 +20,8 @@ dp = Dispatcher()
     F.forward_from_chat.type == "channel"
 )
 async def comment_under_post(message: Message):
-    # Правильная инициализация InputFile для aiogram v3
-    photo = InputFile(path=PHOTO_PATH)
+    # Используем FSInputFile для локальных файлов
+    photo = FSInputFile(PHOTO_PATH)
 
     await bot.send_photo(
         chat_id=message.chat.id,
