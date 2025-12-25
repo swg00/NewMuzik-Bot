@@ -2,7 +2,7 @@ import asyncio
 from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message
 
-BOT_TOKEN = "ВАШ_BOT_TOKEN"
+BOT_TOKEN = "7527692969:AAEeynFXlcLQsbw32fb8srS34YNBGJMc27s"
 COMMENT_TEXT = "💬 Напишите ваше мнение в комментариях!"
 
 bot = Bot(token=BOT_TOKEN)
