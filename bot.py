@@ -3,9 +3,11 @@ from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message
 
 BOT_TOKEN = "7527692969:AAEeynFXlcLQsbw32fb8srS34YNBGJMc27s"
+
+PHOTO_PATH = "promo.jpg"
 COMMENT_TEXT = (
-    "<b>СДЕЛАТЬ ПОСТ О СЕБЕ или ВЫЛОЖИТЬ РЕЛИЗ:</b> @newdistribution\n"
-    "<b>Голоса:</b> https://t.me/boost/newmuzziik\n\n"
+    "<b>🎶 СДЕЛАТЬ ПОСТ О СЕБЕ или ВЫЛОЖИТЬ РЕЛИЗ:</b> @newdistribution\n"
+    "<b>🗣 Голоса:</b> https://t.me/boost/newmuzziik\n\n"
     "<b>Пиши комментарий и становись легендой музыки!</b>"
 )
 
