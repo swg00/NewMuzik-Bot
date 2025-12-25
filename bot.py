@@ -4,9 +4,9 @@ from aiogram.types import Message
 
 BOT_TOKEN = "7527692969:AAEeynFXlcLQsbw32fb8srS34YNBGJMc27s"
 COMMENT_TEXT = (
-    "<b>СДЕЛАТЬ ПОСТ О СЕБЕ или ВЫЛОЖИТЬ РЕЛИЗ:</b>\n"
-    "<b>Голоса:</b>\n\n"
-    "Пиши комментарий и становись легендой музыки!"
+    "<b>СДЕЛАТЬ ПОСТ О СЕБЕ или ВЫЛОЖИТЬ РЕЛИЗ:</b>@newdistribution\n"
+    "<b>Голоса:</b>https://t.me/boost/newmuzziik\n\n"
+    "<b>Пиши комментарий и становись легендой музыки!<b>"
 )
 
 bot = Bot(token=BOT_TOKEN)
