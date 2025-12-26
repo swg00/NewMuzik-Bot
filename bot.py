@@ -1,5 +1,5 @@
 import asyncio
-from aiogram import Bot, Dispatcher, F
+from aiogram import Bot, Dispatcher
 from aiogram.types import Message, FSInputFile
 
 BOT_TOKEN = "7527692969:AAEeynFXlcLQsbw32fb8srS34YNBGJMc27s"
@@ -15,16 +15,16 @@ COMMENT_TEXT = (
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
-# 👇 храним уже обработанные media_group_id
+# 👇 обработанные альбомы
 processed_media_groups = set()
 
-@dp.message(F.forward_from_chat, F.forward_from_chat.type == "channel")
+@dp.channel_post()
 async def comment_under_post(message: Message):
 
-    # 🔹 Если это альбом (несколько фото)
+    # 🔹 если альбом — комментируем только первый элемент
     if message.media_group_id:
         if message.media_group_id in processed_media_groups:
-            return  # уже комментировали → ничего не делаем
+            return
         processed_media_groups.add(message.media_group_id)
 
     photo = FSInputFile(PHOTO_PATH)
