@@ -4,11 +4,11 @@ from aiogram.types import Message, FSInputFile
 
 BOT_TOKEN = "7527692969:AAEeynFXlcLQsbw32fb8srS34YNBGJMc27s"
 
-PHOTO_PATH = "promo.jpg"
+PHOTO_PATH = "muzik.jpg"
 COMMENT_TEXT = (
     "<b>🎶 СДЕЛАТЬ ПОСТ О СЕБЕ или ВЫЛОЖИТЬ РЕЛИЗ:</b> @newdistribution\n\n"
     "<b>🗣 Голоса:</b> https://t.me/boost/newmuzziik\n\n"
-    "<b>💬 Заходи в чат:</b> @newmuzziikchat\n\n"
+    "<b>Все наши каналы:</b> @muzikbl0g\n\n"
     "<b>— Пиши комментарий и становись легендой музыки!</b>"
 )
 
